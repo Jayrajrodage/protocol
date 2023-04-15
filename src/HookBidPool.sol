@@ -518,7 +518,7 @@ contract HookBidPool is EIP712, ReentrancyGuard, AccessControl {
         /// if one has been specified by the maker
         require(
             order.maxStrikePriceMultiple == 0
-                || (strikePrice - assetPrice.assetPriceInWei) * 10e18 / assetPrice.assetPriceInWei
+                || (strikePrice - assetPrice.assetPriceInWei) * 1e18 / assetPrice.assetPriceInWei
                     < order.maxStrikePriceMultiple,
             "option is too far out of the money"
         );
